@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Cryptographic Proofs from Hash Functions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #006bdd;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        header p {
+            font-size: 1.4em;
+        }
+        header p a {
+            color: #ADD8E6;
+            text-decoration: none;
+        }
+        a:hover{ text-decoration: underline;}
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: white;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        h2 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .keyword {
+        color: #4f7942;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Building Cryptographic Proofs from Hash Functions</h1>
+        <p>A book by <a href="https://ic-people.epfl.ch/~achiesa/" target="_blank"><b>Alessandro Chiesa</b></a> and <a href="https://www.eylonyogev.com/" target="_blank"><b>Eylon Yogev</b></a>.</p>
+    </header>
+
+    <main>
+        <p>This book provides a comprehensive and rigorous treatment of <b>cryptographic proofs</b> constructed using <em>ideal hash functions</em> (also known as <em>random oracles</em>). This includes discussions and analyses of notable constructions of <b>SNARGs</b> (succinct non-interactive arguments) based on ideal hash functions. For example, <b>STARKs</b> (scalable transparent arguments of knowledge) are a popular example of SNARGs based on ideal hash functions.</p>
+
+        <p>We study how different types of <b>probabilistic proofs</b> (SPs, IPs, PCPs, IOPs) can be transformed, using ideal hash functions, into cryptographic proofs. The combination of probabilistic proofs and cryptography is central to the theory and practice of SNARGs.</p>
+
+        <p>The security reductions that we provide have explicit error bounds, which enables setting security parameters in practice. In most cases our analyses are essentially tight, and we improve upon the fragmented and incomplete treatment of this material that exists in the research literature. We adopt uniform terminology and notation throughout the book to highlight the relationships between the different constructions that we study.</p>
+
+        <p>This book is a self-contained reference aimed at people interested in understanding the foundations and constructions of succinct arguments. The limited required background (undergraduate-level discrete probability and algorithms) should make this book accessible to a wide audience of students, researchers, and practitioners.</p>
+
+        <h2>Where is the book?</h2>
+
+        <p>The book and its source code are available for free <a href="https://github.com/hash-based-snargs-book/hash-based-snargs-book">on Github</a>.</p>
+
+        <p>They are licensed under the Creative Commons Attribution-ShareAlike 4.0 International License (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>).</p>
+
+        <h2>Contents</h2>
+
+        The book's chapters are divided into parts, which we summarize below.
+
+        <h3>&bull; Part I: What are Cryptographic Proofs?</h3>
+        <p>We introduce the random oracle model and the notion of cryptographic proofs, more formally known as <em>arguments</em>. We describe properties such as (adaptive) soundness, knowledge soundness, and zero knowledge.</p>
+
+        <h3>&bull; Part II: NARGs Based on SPs</h3>
+        <p>We describe how to transform a <span class="keyword">sigma protocol (SP)</span> into a non-interactive argument (NARG). This relies on the <b>Fiat&ndash;Shamir transformation</b>, which uses the random oracle to "remove interaction" from the sigma protocol.</p>
+
+        <h3>&bull; Part III: NARGs Based on IPs</h3>
+        <p>We describe how to transform a public-coin <span class="keyword">interactive proof (IP)</span> into a non-interactive argument (NARG), extending the ideas of Part II to multiple rounds. A delicate point for this <b>multi-round Fiat&ndash;Shamir transformation</b> is that the IP must, for security, satisfy a strong soundness notion, <em>state-restoration soundness</em>.</p>
+
+        <h3>&bull; Part IV: Commitment Schemes</h3>
+        <p>We study two commitment schemes in the random oracle model: the <b>basic commitment scheme</b>; and the <b>Merkle commitment scheme</b>. Commitment schemes are used to construct succinct arguments, studied in Parts V and VI.</p>
+
+        <h3>&bull; Part V: SNARGs Based on PCPs</h3>
+        <p>We describe how to construct succinct arguments from <span class="keyword">probabilistically checkable proofs (PCPs)</span>. This includes an interactive succinct argument (the <b>Kilian transformation</b>) and then, building on this, a non-interactive succinct argument (the <b>Micali transformation</b>). A key ingredient is the Merkle commitment scheme.</p>
+
+        <h3>&bull; Part VI: SNARGs Based on IOPs</h3>
+        <p>We describe how to construct succinct arguments from <span class="keyword">interactive oracle proofs (IOPs)</span>. First we study an interactive succinct argument and then, building on this, a non-interactive succinct argument (the <b>BCS transformation</b>). Merkle commitment schemes are key ingredient. The BCS transformation underlies SNARGs used in practice.</p>
+
+        <h3>&bull; Part VII: Practical Considerations</h3>
+        <p>We include a selection of topics relevant to using arguments in practice: a brief overview of known probabilistic proofs; how to to set parameters to ensure concrete security; Merkle tree optimizations; and discussions of strong soundness properties of probabilistic proofs (special soundness and round-by-round soundness).</p>
+
+        <h2>Acknowledgements</h2>
+
+        <p>The authors are grateful to the <a href="https://ethereum.foundation/" target="_blank">Ethereum Foundation</a>, <a href="https://www.forte.io/" target="_blank">Forte Labs</a>, <a href="https://protocol.ai/" target="_blank">Protocol Labs</a>, and <a href="https://provable.com/" target="_blank">Provable</a> for their support towards the writing of this book.</p>
+
+        <br><br>
+    </main>
+</body>
+</html>
+
